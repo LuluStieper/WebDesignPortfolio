@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend-Design Web: Abschlussprojekt</title>
+
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" href="assets/fonts.css">
+</head>
+<body>
+    <nav>
+        <img src="img/logo.png" id="logo" alt="Logo mit spanischer Flagge">
+        <ul id="menu-list">
+            <li><a href="#pronomen" onclick="closeMenu()">Pronomen</a></li>
+            <li><a href="#verben" onclick="closeMenu()">Verben</a></li>
+            <li><a href="#zeitformen" onclick="closeMenu()">Zeitformen</a></li>
+            <li><a href="#kontakt" onclick="closeMenu()">Kontakt</a></li>
+        </ul>
+        <img src="img/menu.png" id="menu" alt="Hamburger-Icon für Dropdown-Menü" onclick="openMenu()">
+    </nav>
+    <header>
+        <div id="header-img">
+            <img src="img/start.png" alt="Bild mit Schriftzug Yo hablo espnaol">
+        </div> 
+        <div id="header-text">
+            <h1><span>Spanisch</span> lernen für<br> Anfänger</h1>
+            <div id="button">Los gehts!</div>
+        </div>
+    </header>
+    <div class="decoration">
+        <div class="red-line"></div>
+        <div class="yellow-line"></div>
+        <div class="red-line"></div>
+    </div>
+    <article id="pronomen">
+        <h2>Spanische Pronomen</h2>
+        <div id="responsive-tables">
+            <table>
+                <caption>Subjekt Pronomen</caption>
+                <thead>
+                    <tr>
+                        <th>deutsch</th>
+                        <th>spanisch</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ich</td>
+                        <td>yo</td>
+                    </tr>
+                    <tr>
+                        <td>du</td>
+                        <td>tú</td>
+                    </tr>
+                    <tr>
+                        <td>er / sie</td>
+                        <td>él / ella</td>
+                    </tr>
+                    <tr>
+                        <td>Sie</td>
+                        <td>usted</td>
+                    </tr>
+                    <tr>
+                        <td>wir</td>
+                        <td>nosotros / -as</td>
+                    </tr>
+                    <tr>
+                        <td>ihr</td>
+                        <td>vosotros / -as</td>
+                    </tr>
+                    <tr>
+                        <td>sie</td>
+                        <td>ellos / -as</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">
+                            Beispiel:<br><br>
+                            <em>Yo hablo espanol</em>.<br>
+                            Ich spreche Spanisch. <br><br>
+                            <em>Ella come un pan.</em><br>
+                            Sie isst ein Brot.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table>
+                <caption>Objekt Pronomen</caption>
+                <thead>
+                    <tr>
+                        <th>deutsch</th>
+                        <th>spanisch</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>me</td>
+                        <td>mich / mir</td>
+                    </tr>
+                    <tr>
+                        <td>te</td>
+                        <td>dich / dir</td>
+                    </tr>
+                    <tr>
+                        <td>lo / le</td>
+                        <td>ihn / ihm</td>
+                    </tr>
+                    <tr>
+                        <td>la / le</td>
+                        <td>sie / ihr</td>
+                    </tr>
+                    <tr>
+                        <td>nos</td>
+                        <td>uns</td>
+                    </tr>
+                    <tr>
+                        <td>os</td>
+                        <td>euch</td>
+                    </tr>
+                    <tr>
+                        <td>los/ les/ las</td>
+                        <td>sie / ihnen</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">
+                            Beispiel:<br><br>
+                            <em>Eso me complace.</em><br>
+                            Das freut mich. <br><br>
+                            <em>Te daré eso</em>.<br>
+                            Das schenke ich dir.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </article>
+    <div class="decoration">
+        <div class="red-line"></div>
+        <div class="yellow-line"></div>
+        <div class="red-line"></div>
+    </div>
+    <article id="verben">
+        <h2>Spanische Verben</h2>
+        <p>
+            Das Lernen der häufigsten spanischen Verben ist entscheidend für Anfänger. 
+            Diese Verben bilden das Fundament der Sprache und ermöglichen schnelle Fortschritte. 
+            Sie helfen, grundlegende Sätze zu formulieren und alltägliche Gespräche zu führen, 
+            wodurch das Selbstvertrauen und das Verständnis der spanischen Grammatik gestärkt werden.
+        </p>
+        <div>
+             <ul>
+                <li>ser - sein</li>
+                <li>haber - haben</li>
+                <li>estar - sein, sich befinden</li>
+                <li>tener - haben, besitzen</li>
+                <li>hacer - machen, tun</li>
+                <li>ver - sehen</li>
+                <li>poder - können</li>
+                <li>decir - sagen</li>
+                <li>ir - gehen</li>
+                <li>saber - wissen</li>
+            </ul>
+            <ul>
+                <li>dar - geben</li>
+                <li>querer - wollen, mögen, lieben</li>
+                <li>deber - sollen, müssen, schulden</li>
+                <li>llegar - ankommen</li>
+                <li>pasar - passieren, verbringen</li>
+                <li>poner - setzen, stellen, legen</li>
+                <li>creer - glauben</li>
+                <li>parecer - scheinen, erscheinen</li>
+                <li>hablar - sprechen</li>
+                <li>quedar - bleiben, übrig bleiben</li>
+            </ul>
+            <img src="img/one.png" alt="Bild eines spanischen Sombrero">
+        </div>
+    </article>
+    <div class="decoration">
+        <div class="red-line"></div>
+        <div class="yellow-line"></div>
+        <div class="red-line"></div>
+    </div>
+    <article id="zeitformen">
+        <h2>Spanische Zeitformen</h2>
+        <p>
+            Das Lernen der spanischen Zeitformen in dieser Tabelle ist entscheidend für Anfänger, da sie die Grundlage der Sprache bilden. 
+            Mit diesen Zeitformen können Sie alltägliche Gespräche führen, klare Aussagen treffen und Vergangenes sowie Zukünftiges ausdrücken. 
+            Das Verständnis dieser Zeitformen fördert die grammatikalische Kompetenz und erleichtert das Erlernen komplexerer Strukturen. 
+            Zudem ermöglichen sie, spanische Texte besser zu verstehen und selbst korrekte Sätze zu bilden, was das Spracherlebnis insgesamt bereichert.
+        </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Zeitform</th>
+                    <th>Beschreibung</th>
+                    <th>Endungen</th>
+                    <th>Beispiel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Präsens</td>
+                    <td>Gegenwärtige Handlungen oder Zustände</td>
+                    <td>
+                        -ar: o, as, a, amos, áis, an<br><br>
+                        -er: o, es, e, emos, éis, en<br><br>
+                        -ir: o, es, e, imos, ís, en
+                    </td>
+                    <td>
+                        -ar: hablar -> <br>hablo, hablas, habla, hablamos, habláis, hablan<br><br>
+                        -er: comer -> <br>como, comes, come, comemos, coméis, comen<br><br>
+                        -ir: vivir -> <br>vivo, vives, vive, vivimos, vivís, viven
+                    </td>
+                </tr>
+                <tr>
+                    <td>Präteritum (Indefinido)</td>
+                    <td>Abgeschlossene Handlungen in der Vergangenheit</td>
+                    <td>
+                        -ar: é, aste, ó, amos, asteis, aron<br><br>
+                        -er/-ir: í, iste, ió, imos, isteis, ieron
+                    </td>
+                    <td>
+                        -ar: hablar -> <br>hablé, hablaste, habló, hablamos, hablasteis, hablaron<br><br>
+                        -er: comer -> <br>comí, comiste, comió, comimos, comisteis, comieron<br><br>
+                        -ir: vivir -> <br>viví, viviste, vivió, vivimos, vivisteis, vivieron
+                    </td>
+                </tr>
+                <tr>
+                    <td>Futur</td>
+                    <td>Handlungen in der Zukunft</td>
+                    <td>
+                        Infinitiv + é, ás, á, emos, éis, án
+                    </td>
+                    <td>
+                        hablar -> <br>hablaré, hablarás, hablará, hablaremos, hablaréis, hablarán<br><br>
+                        comer -> <br>comeré, comerás, comerá, comeremos, comeréis, comerán<br><br>
+                        vivir -> <br>viviré, vivirás, vivirá, viviremos, viviréis, vivirán
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+    <div class="decoration">
+        <div class="red-line"></div>
+        <div class="yellow-line"></div>
+        <div class="red-line"></div>
+    </div>
+    <article id="kontakt">
+        <h2>Kontakt</h2>
+        <h3>Noch Fragen? Melde dich!</h3>
+        <div id="kontakt-wrap">
+            <div id="kontakt-info">
+                Max Mustermann<br><br>
+                +49 12345678910<br><br>
+                <a href="mailto:beispiel@beispiel.de">beispiel@beispiel.de</a>
+            </div>
+            <form id="myForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="subject">Betreff</label>
+                <input type="text" id="subject" name="subject" required>
+        
+                <label for="message">Nachricht</label>
+        
+                <textarea name="" id="message" rows="12" required></textarea>
+        
+        
+                <button type="submit" id="button">Absenden</button>
+                <span id="sucess" class="hidden">Die Nachricht konnte erfolgreich gesendet werden.</span>
+            </form>
+        </div>
+        
+    </article>
+    <footer>
+        <a href="https://pixabay.com/de/illustrations/sombrero-mexikanischer-hut-5752234">Bild mexikanischer Hut</a><br>
+        <a href="https://pixabay.com/de/vectors/gitarre-musik-musikinstrument-159661/">Bild von Gitarre</a><br>
+        <a href="https://pixabay.com/de/service/license-summary/">Lizenzbestimmungen von Pixabay</a><br>
+        <p>alle anderen Grafiken wurden selbst erstellt</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
