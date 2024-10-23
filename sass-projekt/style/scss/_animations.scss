@@ -1,0 +1,13 @@
+@mixin slideInLeft() {
+   @keyframes slideInLeft {
+        0% {
+            transform: translateX(-30em);
+        }
+
+        100% {
+            transform: translateX(0px);
+        }
+    } 
+
+    animation: slideInLeft .5s linear;
+}
