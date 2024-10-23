@@ -1,0 +1,404 @@
+@use '_variables.scss' as color;
+@use '_mixins.scss' as mixin;
+@use '_animations.scss' as animation;
+
+#logo, 
+#menu 
+{
+    width: 3em;
+}
+
+
+nav {
+    @include mixin.backgroundBlur(color.$light-transparent);
+    width: 100%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding: 1em 2em;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+nav ul {
+    @include mixin.gradientBackground();
+    width: 100%;
+    height: 0px;
+    margin: 0;
+    transition: .8s;
+    list-style: none;
+    text-align: center;
+    border-radius: 0  0 1.875em 1.875em;
+    overflow: hidden;
+    position: fixed;
+    top: 4em;
+    left: 0;
+}
+
+nav ul li {
+    text-decoration: none;
+    padding: 1.2em 2em;
+}
+
+a {
+    color: color.$light;
+}
+
+nav ul li a {
+    transition: all .3s;
+
+    &:hover {
+        @include mixin.gradientText();
+    }
+}
+
+header {
+    @include mixin.fullScreen();
+    @include mixin.responsivePadding();
+    min-height: 90vh;
+    margin-top: .5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+}
+
+header img {
+    width: 100%;
+    max-width: 37.5em;
+}
+
+#header-img, #header-text {
+   @include mixin.centered_flexbox();
+}
+
+#header-img {
+    @include animation.slideInLeft();
+}
+
+h1 span {
+    @include mixin.gradientText();
+    display: block;
+}
+
+h2 {
+    @include mixin.gradientText();
+}
+
+#button {
+    @include mixin.centered_flexbox;
+    background: linear-gradient(90deg, color.$spanish_red, color.$spanish_yellow);
+    transition: all .5s;
+    width: 8em;
+    height: 1.8em;
+    border-radius: 4em;
+    font-size: 1.25em;
+    color: color.$light;
+    text-align: center;
+    margin: 1.5em 0;
+    border: none;
+
+    &:hover {
+        transform: translateY(-.5em);
+        box-shadow: 0 0 1em .02em color.$dark;
+    }
+}
+
+.decoration {
+    width: 100%;
+}
+
+.decoration div {
+    width: 100%;
+    height: .4em;
+}
+
+.red-line {
+    background-color: color.$spanish_red;
+}
+
+.yellow-line {
+    background-color: color.$spanish_yellow;
+}
+
+article {
+    @include mixin.fullScreen();
+    @include mixin.basic_flexbox();
+    @include mixin.responsivePadding();
+    opacity: 0;
+    transform: translateX(-6.25em);
+    transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+article.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#responsive-tables {
+    @include mixin.centered_flexbox();
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 1em;
+    font-size: 1em;
+    box-shadow: 0 0 1em color.$dark-transparent;
+}
+
+thead tr {
+    background-color: color.$accent-color;
+    text-align: left;
+}
+
+th, td {
+    padding: .8em;
+}
+
+tr {
+    border-bottom: 0.063em solid color.$dark-transparent;
+}
+
+tr:last-of-type {
+    border-bottom: none;
+}
+
+tr:nth-of-type(2n) {
+    background-color: color.$accent-color;
+}
+
+thead tr {
+    border-bottom: 0.125em solid color.$spanish_yellow;
+}
+
+th, td {
+    text-align: center;
+}
+
+tfoot {
+    text-align: center;
+}
+
+#pronomen table {
+    max-width: 31.25em;
+}
+
+#verben div {
+    @include mixin.centered_flexbox();
+    width: 100%;
+}
+
+#verben div ul {
+    min-width: 18.125em;
+    width: 100%;
+    list-style: none;
+    background-color: color.$accent-color;
+    border-radius: 1em;
+    margin: 1em 0;
+    padding: 0;
+}
+
+#verben div ul li {
+    border-bottom: 1px solid color.$grey;
+    padding: .8em;
+}
+
+#verben div ul :last-child {
+  border: none;
+}
+
+#verben div img {
+    width: 100%;
+    min-width: 9.375em;
+    max-width: 25em;
+}
+
+#kontakt-wrap {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    margin: 1em 0;
+    border-radius: 0.625em;
+    background-color: color.$dark-transparent;
+}
+
+#kontakt-info {
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 1em;
+}
+
+#kontakt-info a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: color.$dark;
+}
+
+form {
+    @include mixin.centered_flexbox();
+    padding: 1em;
+    border-radius: 0.625em;
+    background-color: color.$light-transparent;
+}
+
+form input, form textarea {
+    width: 100%;
+    border-radius: 1em;
+    border: 0.063em solid color.$grey;
+    padding: .1em .5em;
+}
+
+form input {
+    height: 3em;
+}
+
+form label {
+    width: 100%;
+    text-align: left;
+}
+
+footer {
+    @include mixin.centered_flexbox();
+    @include mixin.gradientBackground();
+    width: 100%;
+    height: 18.75em;
+}
+
+footer a {
+    transition: all .3s;
+    &:hover {
+        transform: translateY(-.5em);
+    }
+}
+
+input.invalid,
+textarea.invalid {
+    border-color: color.$red;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.green {
+    background-color: color.$yellow;
+}
+
+@media screen and (min-width: 32.5em) {
+    // responsive Styles
+    nav {
+        padding: 1em 3.125em;
+    }
+
+    header {
+        grid-template-columns: repeat(auto-fit, minmax(31.25em, 1fr));
+    }
+
+    #verben div ul {
+        width: 31.25em;
+    }
+}
+
+@media screen and (min-width: 56.25em) {
+    // blendet MenÜ-Icon aus und MenÜliste ein
+    #menu {
+        display: none;
+        overflow: hidden;
+    }
+
+    nav {
+        padding: 1em 6.25em;
+    }
+
+    nav ul {
+        overflow: unset;
+        transition: none;
+        position: unset;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    nav ul li {
+        padding: 0 0 0 3em;
+    }
+
+    nav ul li a {
+        color: color.$dark;
+    }
+
+    // responsive Styles
+    #pronomen table {
+        margin: 1em;
+    }
+    
+    #verben div {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-evenly;
+    }
+
+    #verben div ul {
+        margin: .5em;
+        padding: 1em;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    // responsive Styles
+    #responsive-tables {
+        flex-flow: row nowrap;
+    }
+}
+
+
+@media (max-width: 50em) {
+    // responsive Tabelle stylen
+    #zeitformen table,#zeitformen thead,#zeitformen tbody,#zeitformen th,#zeitformen td,#zeitformen tr {
+        display: block;
+        width: 100%;
+    }
+
+    #zeitformen thead tr {
+        position: absolute;
+        top: -600em;
+        left: -600em;
+    }
+
+    #zeitformen tr :first-child {
+        font-weight: 600;
+    }
+
+    #zeitformen tr:nth-child(even) {
+        background: #f9f9f9;
+    }
+
+    #zeitformen td {
+        border: none;
+        border-bottom: 0.063em solid #ddd;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    #zeitformen td::before {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+    }
+
+    #zeitformen td:nth-of-type(1)::before { content: "Zeitform"; }
+    #zeitformen td:nth-of-type(2)::before { content: "Beschreibung"; }
+    #zeitformen td:nth-of-type(3)::before { content: "Endungen"; }
+    #zeitformen td:nth-of-type(4)::before { content: "Beispiel"; }
+}
